@@ -69,9 +69,9 @@ else use 'Just_GPT'
 - ③ : 웹 검색이 필요한 질문이라 판단
 - ④ : 단순하게 그냥 대답할 수 있는 질문이라 판단
 
-### 1. 이미지 생성 루트
+### 1. 이미지 생성 WorkFlow
 
-사용자의 질문이 이미지 생성이 필요하다고 판단되었을 때
+사용자의 질문이 이미지 생성이 필요하다고 판단되었을 때 해당 WorkFlow를 타게 됩니다.
 
 ![image](https://github.com/user-attachments/assets/de1a079b-bace-4d6f-b368-89e5d46ee322)
 
