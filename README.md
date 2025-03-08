@@ -45,7 +45,7 @@ Adaptive RAG의 Self RAG 로 되있는 부분을 Corrective RAG로 변경 및 �
 
 먼저, 사용자에게 질문이 들어오면 질문이 어떤 유형인지 routing 합니다.
 
-해당 프롬포트를 사용합니다.
+해당 프롬포트를 사용합니다. 여기에서 {vector_inf}는 사용자에게 UI에서 입력 받습니다.
 
 ```python
 class Route(BaseModel):
@@ -64,3 +64,24 @@ else use 'Just_GPT'
 
 ![image](https://github.com/user-attachments/assets/0bceb4f7-5b59-403f-903f-ce2ae6f6f32f)
 
+- ① : 이미지 생성이 필요하다 판단
+- ② : 사용자가 올려준 문서로 부터 RAG를 해야한다 판단
+- ③ : 웹 검색이 필요한 질문이라 판단
+- ④ : 단순하게 그냥 대답할 수 있는 질문이라 판단
+
+### 1. 이미지 생성 루트
+
+사용자의 질문이 이미지 생성이 필요하다고 판단되었을 때
+
+![image](https://github.com/user-attachments/assets/de1a079b-bace-4d6f-b368-89e5d46ee322)
+
+이미지 제너레이터 모델인 Dall-E를 사용. 공식 프롬프트만 사용했을 경우, 이미지 생성 요구 프롬프트가 1000자를 자꾸 넘어서 오류가 생기기에 글자수 제한 프롬프트를 추가함.
+
+```python
+    prompt = PromptTemplate(
+        input_variables=["image_desc"],
+        template="Generate a prompt to generate an image based on the following description. Prompt must be length 1000 or less : {image_desc}",
+    )
+```
+
+참고 : https://python.langchain.com/docs/integrations/tools/dalle_image_generator/
