@@ -121,5 +121,7 @@ FACTS: {{documents}}
 QUESTION: {{question}}
 ```
 
+만약 가져온 문서가 질문과 유사성이 높다고 판단된다면 ② Work Flow를 통해 답변을 내놓고, 아니면 Web Search WorkFlow를 타게됨.
+
 참고 : https://smith.langchain.com/hub/langchain-ai/rag-document-relevance
 
