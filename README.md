@@ -9,7 +9,7 @@ LangGraph를 통해 AI Agent를 구현합니다. 그리고 이를 Streamlit으�
 
 <br>
 
-# 1. AI Agent Work Flow
+# 1. AI Agent With Work Flow
 
 ## 1. Work Flow
 
@@ -161,9 +161,13 @@ Answer:
 
 프롬프트 참고 : https://smith.langchain.com/hub/langchain-ai/rag-document-relevance
 
+<br>
+
 **- ② : Retrieve 정보를 기반하여 답변 생성**
 
 프롬프트 참고 : https://smith.langchain.com/hub/rlm/rag-prompt
+
+<br>
 
 ### 4. 일반 답변
 
@@ -171,4 +175,68 @@ Answer:
 
 ![image](https://github.com/user-attachments/assets/527047f9-eab3-4b7e-8f90-7c83528a0dc9)
 
+
+<br>
+
+# 2. AI Agent With Tools
+
+전체적 구조는 다음과 같습니다.
+
+![image](https://github.com/user-attachments/assets/918a6062-5686-4798-84aa-294dafc69891)
+
+대략적인 작동 기전은 사용자로부터 Input을 받게 되면 여러 주어진 Tool들을 사용하여 알아서 Agent가 답변을 생성하고,
+
+답변 생성이 완료되었다면 여태 있었던 메세지를 요약하여 저장합니다.
+
+그리고 마지막으로, 메세지 요약도 저장하고 있으며 대부분의 질문의 경우 오래된 메세지는 활용되지 않는 점을 고려하여 토큰을 절약하고자 메세지를 마지막 3개를 제외하고 지웁니다.
+
+이 과정은 과한 토큰 사용을 방지할 수 있습니다.
+
+### 1. Summarize messages
+
+메세지를 요약하여 저장합니다.
+
+사용 프롬프트는 다음과 같습니다.
+
+```python
+# state에서 메시지와 요약을 가져옵니다.
+messages = state['messages']
+summary = state['summary']
+
+# 요약 프롬프트를 생성합니다.
+summary_prompt = f'summarize this chat history below: \n\nchat_history:{messages}'
+    
+# 기존 요약이 있으면, 요약을 포함한 프롬프트를 생성합니다.
+if summary != '':
+   summary_prompt = f'''summarize this chat history below while looking at the summary of earlier conversations
+chat_history:{messages}
+summary:{summary}'''
+```
+
+<br>
+
+### 2. 
+마지막 3개의 메세지를 빼고 나머지 메세지를 지웁니다.
+
+```python
+
+def delete_messages(state: AgentState) -> AgentState:
+    """
+    주어진 state에서 오래된 메시지를 삭제합니다.
+
+    Args:
+        state (AgentState): 메시지를 포함하는 state.
+
+    Returns:
+        AgentState: 삭제된 메시지를 포함하는 새로운 state.
+    """
+    # state에서 메시지를 가져옵니다.
+    messages = state['messages']
+    # 마지막 세 개의 메시지를 제외한 나머지 메시지를 삭제합니다.
+    delete_messages = [RemoveMessage(id=message.id) for message in messages[:-3]]
+    # 삭제된 메시지를 포함하는 새로운 state를 반환합니다.
+    return {'messages': delete_messages}
+```
+
+<br>
 
