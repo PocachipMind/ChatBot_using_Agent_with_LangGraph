@@ -41,6 +41,7 @@ $ conda env create -f env_yaml.yaml
 ```
 $ conda activate AgentChat
 ```
+### 4. 앱 실행
 - Streamlit을 통한 앱 실행
 ```
 $ streamlit run app.py
