@@ -11,7 +11,7 @@ LangGraph를 통해 AI Agent를 구현합니다. 그리고 이를 Streamlit으�
 
 # 1. AI Agent Work Flow
 
-### 1. Work Flow
+## 1. Work Flow
 
 프로젝트 내부 구현되있는 Agent Work Flow는 다음과 같습니다.
 
@@ -41,7 +41,7 @@ Adaptive RAG의 Self RAG 로 되있는 부분을 Corrective RAG로 변경 및 �
 
 <br>
 
-### 2. 동작 방식
+## 2. 동작 방식
 
 먼저, 사용자에게 질문이 들어오면 질문이 어떤 유형인지 routing 합니다.
 
