@@ -153,6 +153,18 @@ Answer:
 
 사용자의 질문이 Vector DB 내부에도 없을 것 같고 일반적인 답이 아니라 웹 검색을 해야 알 수 있을 것 같다고 판단되었을 때 해당 WorkFlow를 타게 됩니다.
 
-![image](https://github.com/user-attachments/assets/6da2096c-5b64-4f7e-a035-fd3d3ba5a1a1)
+![image](https://github.com/user-attachments/assets/f9d1a083-b92e-466c-a417-f1ee823e8f5b)
+
+**2. RAG 활용 WorkFlow** 에서 사용한 프롬프트를 동일하게 사용합니다.
+
+**- ① : DB에서 Retrieve 한 다음 해당 내용이 사용자의 질문과 관련이 있는지 파악**
+
+**- ② : Retrieve 정보를 기반하여 답변 생성**
+
+### 4. 일반 답변
+
+위 세가지 경우 외의 모든 답변은 아무런 프롬프트 조정 없는 일반적인 GPT 모델이 답변을 합니다.
+
+![image](https://github.com/user-attachments/assets/527047f9-eab3-4b7e-8f90-7c83528a0dc9)
 
 
