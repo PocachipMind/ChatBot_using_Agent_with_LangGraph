@@ -182,7 +182,7 @@ Answer:
 
 전체적 구조는 다음과 같습니다.
 
-![image](https://github.com/user-attachments/assets/918a6062-5686-4798-84aa-294dafc69891)
+![image](https://github.com/user-attachments/assets/5929781e-1e40-4961-b9e3-9cd0e11ef24c)
 
 대략적인 작동 기전은 사용자로부터 Input을 받게 되면 여러 주어진 Tool들을 사용하여 알아서 Agent가 답변을 생성하고,
 
