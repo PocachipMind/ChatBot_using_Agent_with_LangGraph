@@ -23,7 +23,7 @@ LangGraph를 통해 AI Agent를 구현합니다. 그리고 이를 Streamlit으�
 
 ![image](https://github.com/user-attachments/assets/86bacbc8-d5e7-43f9-9724-36888a4baa4e)
 
-Adaptive RAG의 Self RAG 로 되있는 부분을 Corrective RAG로 변경 및 일부 커스텀 하여 구성하였습니다.
+Adaptive RAG의 Self RAG 로 되있는 부분을 Corrective RAG로 교체 및 일부 커스텀 하여 구성하였습니다.
 
 ![image](https://github.com/user-attachments/assets/9ffb3fe6-046a-44ca-bdd2-33d3a9f3a7f8)
 
