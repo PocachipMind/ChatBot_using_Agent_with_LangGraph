@@ -97,7 +97,7 @@ prompt = PromptTemplate(
 **- ① : DB에서 Retrieve 한 다음 해당 내용이 사용자의 질문과 관련이 있는지 파악**
 
 해당 프롬프트를 사용
-```python
+```
 ####### system ######
 You are a teacher grading a quiz. 
 
