@@ -80,15 +80,46 @@ else use 'Just_GPT'
 LangChain 공식 사이트의 프롬프트만 사용했을 경우, 이미지 생성 요구 프롬프트가 1000자를 자꾸 넘어서 오류가 생기기에 글자수 제한 프롬프트를 추가함.
 
 ```python
-    prompt = PromptTemplate(
-        input_variables=["image_desc"],
-        template="Generate a prompt to generate an image based on the following description. Prompt must be length 1000 or less : {image_desc}",
-    )
+prompt = PromptTemplate(
+    input_variables=["image_desc"],
+    template="Generate a prompt to generate an image based on the following description. Prompt must be length 1000 or less : {image_desc}",
+)
 ```
 
 참고 : https://python.langchain.com/docs/integrations/tools/dalle_image_generator/
 
 ### 1. RAG 활용 WorkFlow
 
+사용자의 질문이 Vector DB 내부에 정보가 있을 것 같다고 판단되었을 때 해당 WorkFlow를 타게 됩니다.
+
 ![image](https://github.com/user-attachments/assets/97ebdd2f-b960-4ea5-9cf0-e40d72dd0b6d)
+
+**- ① : DB에서 Retrieve 한 다음 해당 내용이 사용자의 질문과 관련이 있는지 파악**
+
+해당 프롬프트를 사용
+```python
+####### system ######
+You are a teacher grading a quiz. 
+
+You will be given a QUESTION and a set of FACTS provided by the student. 
+
+Here is the grade criteria to follow:
+(1) You goal is to identify FACTS that are completely unrelated to the QUESTION
+(2) If the facts contain ANY keywords or semantic meaning related to the question, consider them relevant
+(3) It is OK if the facts have SOME information that is unrelated to the question (2) is met 
+
+Score:
+A score of 1 means that the FACT contain ANY keywords or semantic meaning related to the QUESTION and are therefore relevant. This is the highest (best) score. 
+A score of 0 means that the FACTS are completely unrelated to the QUESTION. This is the lowest possible score you can give.
+
+Explain your reasoning in a step-by-step manner to ensure your reasoning and conclusion are correct.
+ 
+Avoid simply stating the correct answer at the outset.
+
+###### human ######
+FACTS: {{documents}} 
+QUESTION: {{question}}
+```
+
+참고 : https://smith.langchain.com/hub/langchain-ai/rag-document-relevance
 
