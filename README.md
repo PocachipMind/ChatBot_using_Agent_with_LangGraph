@@ -31,4 +31,6 @@ Adaptive RAG의 Self RAG 부분을 Corrective RAG로 변경 및 일부 커스텀
 
 관련 정보 : 
 
-- Adaptive RAG : https://langchain-ai.github.io/langgraph/tutorials/rag/langgraph_adaptive_rag/
+- Adaptive RAG :
+    - https://langchain-ai.github.io/langgraph/tutorials/rag/langgraph_adaptive_rag/
+    - https://arxiv.org/abs/2403.14403
