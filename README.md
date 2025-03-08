@@ -11,7 +11,7 @@ LangGraph를 통해 AI Agent를 구현합니다. 그리고 이를 Streamlit으�
 
 # 1. AI Agent Work Flow
 
-### 1.1 Work Flow
+### 1. Work Flow
 
 프로젝트 내부 구현되있는 Agent Work Flow는 다음과 같습니다.
 
