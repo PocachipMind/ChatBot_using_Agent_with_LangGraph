@@ -62,7 +62,7 @@ else use 'Just_GPT'
 """
 ```
 
-![image](https://github.com/user-attachments/assets/0bceb4f7-5b59-403f-903f-ce2ae6f6f32f)
+![image](https://github.com/user-attachments/assets/4e806e82-2f16-40bb-8541-888d8144a878)
 
 - ① : 이미지 생성이 필요하다 판단
 - ② : 사용자가 올려준 문서로 부터 RAG를 해야한다 판단
@@ -75,7 +75,9 @@ else use 'Just_GPT'
 
 ![image](https://github.com/user-attachments/assets/de1a079b-bace-4d6f-b368-89e5d46ee322)
 
-이미지 제너레이터 모델인 Dall-E를 사용. 공식 프롬프트만 사용했을 경우, 이미지 생성 요구 프롬프트가 1000자를 자꾸 넘어서 오류가 생기기에 글자수 제한 프롬프트를 추가함.
+이미지 제너레이터 모델인 Dall-E를 사용.
+
+LangChain 공식 사이트의 프롬프트만 사용했을 경우, 이미지 생성 요구 프롬프트가 1000자를 자꾸 넘어서 오류가 생기기에 글자수 제한 프롬프트를 추가함.
 
 ```python
     prompt = PromptTemplate(
@@ -85,3 +87,8 @@ else use 'Just_GPT'
 ```
 
 참고 : https://python.langchain.com/docs/integrations/tools/dalle_image_generator/
+
+### 1. RAG 활용 WorkFlow
+
+![image](https://github.com/user-attachments/assets/97ebdd2f-b960-4ea5-9cf0-e40d72dd0b6d)
+
