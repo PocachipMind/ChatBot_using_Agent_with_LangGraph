@@ -248,6 +248,10 @@ def delete_messages(state: AgentState) -> AgentState:
 2. Dall-E image generator Tool : 이미지 생성 기능 Tool
 3. WebSearch Tool ( Tavily ) : 웹 검색 기능 Tool
 
+<br>
+
+<br>
+
 ## 3. 한계점 : 동적 Retriever 객체 소실
 
 동적으로 Vector DB를 만들고 Streamlit UI 작동 중에 Retriever가 정의되다보니
