@@ -268,6 +268,7 @@ def delete_messages(state: AgentState) -> AgentState:
 
 ![image](https://github.com/user-attachments/assets/88cf340f-c780-42c0-bee5-aa842a16ab5a)
 
-![image](https://github.com/user-attachments/assets/796f7a81-d023-4401-b4fd-1fac991bc78b)
+![image](https://github.com/user-attachments/assets/f18c321e-ec52-41a3-bbc1-84796ffc2208)
+
 
 
