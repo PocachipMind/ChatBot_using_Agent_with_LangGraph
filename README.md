@@ -88,7 +88,7 @@ prompt = PromptTemplate(
 
 참고 : https://python.langchain.com/docs/integrations/tools/dalle_image_generator/
 
-### 1. RAG 활용 WorkFlow
+### 2. RAG 활용 WorkFlow
 
 사용자의 질문이 Vector DB 내부에 정보가 있을 것 같다고 판단되었을 때 해당 WorkFlow를 타게 됩니다.
 
@@ -96,9 +96,10 @@ prompt = PromptTemplate(
 
 **- ① : DB에서 Retrieve 한 다음 해당 내용이 사용자의 질문과 관련이 있는지 파악**
 
-해당 프롬프트를 사용
+해당 프롬프트를 사용합니다.
 ```
 ####### system ######
+
 You are a teacher grading a quiz. 
 
 You will be given a QUESTION and a set of FACTS provided by the student. 
@@ -117,11 +118,33 @@ Explain your reasoning in a step-by-step manner to ensure your reasoning and con
 Avoid simply stating the correct answer at the outset.
 
 ###### human ######
+
 FACTS: {{documents}} 
 QUESTION: {{question}}
 ```
 
-만약 가져온 문서가 질문과 유사성이 높다고 판단된다면 ② Work Flow를 통해 답변을 내놓고, 아니면 Web Search WorkFlow를 타게됨.
+만약 가져온 문서가 질문과 유사성이 높다고 판단된다면 ② Work Flow를 통해 답변을 내놓고, 아니면 Web Search WorkFlow를 타게됩니다.
 
 참고 : https://smith.langchain.com/hub/langchain-ai/rag-document-relevance
+
+**- ② : Retrieve 정보를 기반하여 답변 생성**
+
+해당 프롬프트를 사용합니다.
+```
+##### human #####
+
+You are an assistant for question-answering tasks. Use the following pieces of retrieved context to answer the question. If you don't know the answer, just say that you don't know. Use three sentences maximum and keep the answer concise.
+Question: {question} 
+Context: {context} 
+Answer:
+```
+
+참고 : https://smith.langchain.com/hub/rlm/rag-prompt
+
+### 3. Web 활용 WorkFlow
+
+사용자의 질문이 Vector DB 내부에도 없을 것 같고 일반적인 답이 아니라 웹 검색을 해야 알 수 있을 것 같다고 판단되었을 때 해당 WorkFlow를 타게 됩니다.
+
+![image](https://github.com/user-attachments/assets/6da2096c-5b64-4f7e-a035-fd3d3ba5a1a1)
+
 
