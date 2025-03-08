@@ -215,7 +215,7 @@ summary:{summary}'''
 
 <br>
 
-### 2. 
+### 2. Delete messages
 마지막 3개의 메세지를 빼고 나머지 메세지를 지웁니다.
 
 ```python
