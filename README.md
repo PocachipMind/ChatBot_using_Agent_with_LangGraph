@@ -45,7 +45,7 @@ Adaptive RAG의 Self RAG 로 되있는 부분을 Corrective RAG로 변경 및 �
 
 먼저, 사용자에게 질문이 들어오면 질문이 어떤 유형인지 routing 합니다.
 
-![image](https://github.com/user-attachments/assets/0bceb4f7-5b59-403f-903f-ce2ae6f6f32f)
+해당 프롬포트를 사용합니다.
 
 ```python
 class Route(BaseModel):
@@ -61,3 +61,6 @@ if you think you need to search the web to answer the question use 'web_search'
 else use 'Just_GPT'
 """
 ```
+
+![image](https://github.com/user-attachments/assets/0bceb4f7-5b59-403f-903f-ce2ae6f6f32f)
+
