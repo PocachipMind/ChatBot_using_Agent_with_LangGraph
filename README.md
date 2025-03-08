@@ -45,7 +45,7 @@ Adaptive RAG의 Self RAG 로 되있는 부분을 Corrective RAG로 변경 및 �
 
 먼저, 사용자에게 질문이 들어오면 질문이 어떤 유형인지 routing 합니다.
 
-해당 프롬포트를 사용합니다. 여기에서 {vector_inf}는 사용자에게 UI에서 입력 받습니다.
+해당 프롬포트를 사용합니다. 여기에서 {vector_inf}는 사용자에게 UI에서 입력 받는 Vector DB의 정보입니다.
 
 ```python
 class Route(BaseModel):
