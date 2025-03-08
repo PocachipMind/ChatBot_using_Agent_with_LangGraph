@@ -48,28 +48,16 @@ Adaptive RAG의 Self RAG 로 되있는 부분을 Corrective RAG로 변경 및 �
 ![image](https://github.com/user-attachments/assets/0bceb4f7-5b59-403f-903f-ce2ae6f6f32f)
 
 ```python
-def router(state: AgentState) -> Literal['Dall-E', 'vector_store', 'web_search', 'Just_GPT']:
-    """
-    사용자의 질문에 기반하여 적절한 경로를 결정합니다.
+class Route(BaseModel):
+    target: Literal['Dall-E', 'vector_store', 'web_search', 'Just_GPT'] = Field(
+        description="The target for the query to answer"
+    )
 
-    Args:
-        state (AgentState): 사용자의 질문을 포함한 에이전트의 현재 state.
-
-    Returns:
-        Literal['Dall-E', 'vector_store', 'web_search']: 질문을 처리하기 위한 적절한 경로를 나타내는 문자열.
-    """
-    
-    # state에서 질문과 벡터 정보를 추출합니다
-    query = state['query_message']
-    inf = state['vector_info']
-    
-    # 프롬프트와 구조화된 라우터 LLM을 연결하여 체인을 생성합니다
-    router_chain = router_prompt | structured_router_llm 
-    
-    # 체인을 사용하여 경로를 결정합니다
-    route = router_chain.invoke({'query': query , 'vector_inf' : inf})
-    
-    print(f"call : router > {route.target}")
-    # 결정된 경로의 타겟을 반환합니다
-    return route.target
+router_system_prompt = """
+You are an expert at routing a user's question to 'Dall-E', 'vector_store', 'Just_GPT' or 'web_search'.
+'vector_store' contains {vector_inf}.
+if you think to create an image use 'Dall-E'.
+if you think you need to search the web to answer the question use 'web_search'
+else use 'Just_GPT'
+"""
 ```
