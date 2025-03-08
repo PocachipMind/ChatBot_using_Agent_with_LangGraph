@@ -69,6 +69,8 @@ else use 'Just_GPT'
 - ③ : 웹 검색이 필요한 질문이라 판단
 - ④ : 단순하게 그냥 대답할 수 있는 질문이라 판단
 
+<br>
+
 ### 1. 이미지 생성 WorkFlow
 
 사용자의 질문이 이미지 생성이 필요하다고 판단되었을 때 해당 WorkFlow를 타게 됩니다.
@@ -87,6 +89,8 @@ prompt = PromptTemplate(
 ```
 
 참고 : https://python.langchain.com/docs/integrations/tools/dalle_image_generator/
+
+<br>
 
 ### 2. RAG 활용 WorkFlow
 
@@ -127,6 +131,8 @@ QUESTION: {{question}}
 
 참고 : https://smith.langchain.com/hub/langchain-ai/rag-document-relevance
 
+<br>
+
 **- ② : Retrieve 정보를 기반하여 답변 생성**
 
 해당 프롬프트를 사용합니다.
@@ -140,6 +146,8 @@ Answer:
 ```
 
 참고 : https://smith.langchain.com/hub/rlm/rag-prompt
+
+<br>
 
 ### 3. Web 활용 WorkFlow
 
