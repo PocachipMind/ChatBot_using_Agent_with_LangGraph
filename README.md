@@ -240,3 +240,11 @@ def delete_messages(state: AgentState) -> AgentState:
 
 <br>
 
+### 3. Agent에게 제공한 Tools
+
+![image](https://github.com/user-attachments/assets/678debba-a6ab-472a-a4b3-4f23cfdd6cae)
+
+1. Retriever Tool : 사용자가 넣어준 문서 기반 RAG 기능 Tool
+2. Dall-E image generator Tool : 이미지 생성 기능 Tool
+3. WebSearch Tool ( Tavily ) : 웹 검색 기능 Tool
+
