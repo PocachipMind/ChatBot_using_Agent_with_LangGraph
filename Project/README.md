@@ -21,11 +21,11 @@
 
 ### 3. Terminal 실행 후 Python 가상환경 활성화
 
-- 첨부된 nvidia_openCV_pj_env.yaml을 활용
+- 첨부된 env_yaml.yaml을 활용
   
 - 하기와 같은 Command를 사용하여 가상환경 설치 진행
 ```
-$ conda env create -f nvidia_openCV_pj_env.yaml
+$ conda env create -f env_yaml.yaml
 ```
 - 환경 설치가 완료되면 하기와 같은 Command를 사용하여 가상환경 활성화 진행
 ```
