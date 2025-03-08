@@ -1,4 +1,4 @@
-name: F_P
+name: AgentChat
 channels:
   - conda-forge
   - defaults
