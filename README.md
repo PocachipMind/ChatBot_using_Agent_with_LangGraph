@@ -75,9 +75,9 @@ else use 'Just_GPT'
 
 ![image](https://github.com/user-attachments/assets/de1a079b-bace-4d6f-b368-89e5d46ee322)
 
-이미지 제너레이터 모델인 Dall-E를 사용.
+이미지 제너레이터 모델인 Dall-E를 사용합니다.
 
-LangChain 공식 사이트의 프롬프트만 사용했을 경우, 이미지 생성 요구 프롬프트가 1000자를 자꾸 넘어서 오류가 생기기에 글자수 제한 프롬프트를 추가함.
+LangChain 공식 사이트의 프롬프트만 사용했을 경우, 이미지 생성 요구 프롬프트가 1000자를 자꾸 넘어서 오류가 생기기에 글자수 제한 프롬프트를 추가했습니다.
 
 ```python
 prompt = PromptTemplate(
