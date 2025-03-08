@@ -19,6 +19,8 @@ LangGraph를 통해 AI Agent를 구현합니다. 그리고 이를 Streamlit으�
 
 <br>
 
+<br>
+
 해당 구조는 다음과 같은 Adaptive RAG 구조를 기반으로 합니다.
 
 ![image](https://github.com/user-attachments/assets/86bacbc8-d5e7-43f9-9724-36888a4baa4e)
