@@ -88,7 +88,7 @@ prompt = PromptTemplate(
 )
 ```
 
-참고 : https://python.langchain.com/docs/integrations/tools/dalle_image_generator/
+프롬프트 참고 : https://python.langchain.com/docs/integrations/tools/dalle_image_generator/
 
 <br>
 
@@ -129,7 +129,7 @@ QUESTION: {{question}}
 
 만약 가져온 문서가 질문과 유사성이 높다고 판단된다면 ② Work Flow를 통해 답변을 내놓고, 아니면 Web Search WorkFlow를 타게됩니다.
 
-참고 : https://smith.langchain.com/hub/langchain-ai/rag-document-relevance
+프롬프트 참고 : https://smith.langchain.com/hub/langchain-ai/rag-document-relevance
 
 <br>
 
@@ -145,7 +145,7 @@ Context: {context}
 Answer:
 ```
 
-참고 : https://smith.langchain.com/hub/rlm/rag-prompt
+프롬프트 참고 : https://smith.langchain.com/hub/rlm/rag-prompt
 
 <br>
 
@@ -159,7 +159,11 @@ Answer:
 
 **- ① : DB에서 Retrieve 한 다음 해당 내용이 사용자의 질문과 관련이 있는지 파악**
 
+프롬프트 참고 : https://smith.langchain.com/hub/langchain-ai/rag-document-relevance
+
 **- ② : Retrieve 정보를 기반하여 답변 생성**
+
+프롬프트 참고 : https://smith.langchain.com/hub/rlm/rag-prompt
 
 ### 4. 일반 답변
 
