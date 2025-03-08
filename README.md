@@ -11,17 +11,19 @@ LangGraph를 통해 AI Agent를 구현합니다. 그리고 이를 Streamlit으�
 
 # 1. AI Agent Work Flow
 
+## 1.1 Work Flow
+
 프로젝트 내부 구현되있는 Agent Work Flow는 다음과 같습니다.
 
 ![image](https://github.com/user-attachments/assets/d30c5862-dce3-4d03-98a1-eff1688d4319)
 
 <br>
 
-해당 구조는 Adaptive RAG를 기반에서 
+해당 구조는 다음과 같은 Adaptive RAG 구조를 기반으로 합니다.
 
 ![image](https://github.com/user-attachments/assets/86bacbc8-d5e7-43f9-9724-36888a4baa4e)
 
-Self RAG 부분으로 되어있는 부분을 Corrective RAG로 변경 및 일부 커스텀 하여 구성되었습니다.
+Adaptive RAG의 Self RAG 부분을 Corrective RAG로 변경 및 일부 커스텀 하여 구성하였습니다.
 
 ![image](https://github.com/user-attachments/assets/9ffb3fe6-046a-44ca-bdd2-33d3a9f3a7f8)
 
