@@ -28,19 +28,22 @@ $ git clone https://github.com/PocachipMind/ChatBot_using_Agent_with_LangGraph.g
 
 ### 3. Terminal 실행 후 Python 가상환경 활성화
 
-- 첨부된 env_yaml.yaml을 활용
 - cd 명령어를 통해 git clone한 폴더의 Project폴더로 진입
 ```
 $ cd ( 깃 클론한 곳 위치 )
 ```
+
+- 첨부된 env_yaml.yaml을 활용
 - 하기와 같은 Command를 사용하여 가상환경 설치 진행
 ```
 $ conda env create -f env_yaml.yaml
 ```
+
 - 환경 설치가 완료되면 하기와 같은 Command를 사용하여 가상환경 활성화 진행
 ```
 $ conda activate AgentChat
 ```
+
 ### 4. 앱 실행
 - 앱을 실행하기 전 환경 설정
   
