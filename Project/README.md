@@ -43,7 +43,8 @@ $ conda activate AgentChat
 ```
 ### 4. 앱 실행
 - 앱을 실행하기 전 환경 설정
-  해당 폴더 안에 ".env" 파일을 생성하고 GPT API KEY, TAVILY API KEY를 다음과 같은 형식으로 저장
+  
+해당 폴더 안에 ".env" 파일을 생성하고 GPT API KEY, TAVILY API KEY를 다음과 같은 형식으로 저장
 ![image](https://github.com/user-attachments/assets/ed5cd250-2920-409d-83f8-1ed639ebeea3)
 
 
