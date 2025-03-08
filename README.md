@@ -88,7 +88,7 @@ prompt = PromptTemplate(
 )
 ```
 
-프롬프트 참고 : https://python.langchain.com/docs/integrations/tools/dalle_image_generator/
+참고 : https://python.langchain.com/docs/integrations/tools/dalle_image_generator/
 
 <br>
 
