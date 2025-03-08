@@ -29,7 +29,7 @@ $ conda env create -f env_yaml.yaml
 ```
 - 환경 설치가 완료되면 하기와 같은 Command를 사용하여 가상환경 활성화 진행
 ```
-$ conda activate nvidia_openCV_pj_env
+$ conda activate AgentChat
 ```
 ## 실행 환경 : Visual Studio (VS) Code
 
