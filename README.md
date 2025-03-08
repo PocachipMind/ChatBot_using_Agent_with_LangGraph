@@ -248,3 +248,22 @@ def delete_messages(state: AgentState) -> AgentState:
 2. Dall-E image generator Tool : 이미지 생성 기능 Tool
 3. WebSearch Tool ( Tavily ) : 웹 검색 기능 Tool
 
+## 3. 한계점
+
+동적으로 Vector DB를 만들고 Streamlit UI 작동 중에 Retriever가 정의되다보니
+
+특정 조건이 있으면 Retriever 객체 소실되는 문제점 발생. ( 정확한 특정 조건을 파악하지 못함 )
+
+![image](https://github.com/user-attachments/assets/a33a2c04-3fae-42ab-8844-96e6e1fcfc69)
+
+해당 부분은 많은 시도를 해보았으나 Streamlit 동작 방식과 langchain_core.vectorstores 의 내부 동작 방식을 깊이 파악해야한다고 판단,
+
+최종적으로 오류를 수정하지 못하고 해결해야할 과제로 남아있음.
+
+![image](https://github.com/user-attachments/assets/55c22e33-65ed-427e-9df5-a9cae44078c1)
+
+![image](https://github.com/user-attachments/assets/88cf340f-c780-42c0-bee5-aa842a16ab5a)
+
+![image](https://github.com/user-attachments/assets/796f7a81-d023-4401-b4fd-1fac991bc78b)
+
+
