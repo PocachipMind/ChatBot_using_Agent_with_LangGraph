@@ -7,7 +7,7 @@ LangGraph를 통해 AI Agent를 구현합니다. 그리고 이를 Streamlit으�
 
 전체 프로그램 구조 및 사용 시연 : https://youtu.be/dr989e1u4uE
 
-사용 워크 플로우 정리 : 
+사용 워크 플로우 정리 : https://poca.tistory.com/entry/여러-RAG-기법
 
 <br>
 
@@ -41,8 +41,7 @@ Adaptive RAG의 Self RAG 로 되있는 부분을 Corrective RAG로 교체 및 �
     - https://langchain-ai.github.io/langgraph/tutorials/rag/langgraph_crag/?h=corrective+retrieval
     - https://arxiv.org/abs/2401.15884
 - 블로그 정리 :
-    - https://langchain-ai.github.io/langgraph/tutorials/rag/langgraph_crag/?h=corrective+retrieval
-    - https://arxiv.org/abs/2401.15884
+    - https://poca.tistory.com/entry/여러-RAG-기법
 
 <br>
 
