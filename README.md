@@ -7,9 +7,7 @@ LangGraph를 통해 AI Agent를 구현합니다. 그리고 이를 Streamlit으�
 
 전체 프로그램 구조 및 사용 시연 : 
 
-[![Video Label](http://img.youtube.com/vi/dr989e1u4uE/0.jpg)](https://youtu.be/dr989e1u4uE)
-
-https://youtu.be/dr989e1u4uE
+[![Video Label](https://github.com/user-attachments/assets/28466a46-71be-4291-9971-f6fe6731089f)](https://youtu.be/dr989e1u4uE)
 
 사용 RAG 워크 플로우 정리 : https://poca.tistory.com/entry/여러-RAG-기법
 
